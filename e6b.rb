@@ -13,32 +13,6 @@ ba_12345 = {
   :aircraft => "Boeing 747"
 }
 
-va_33333 = {
-  :flight_number => 'va-33333',
-  :airline => 'Virgin Atlantic',
-  :from => "LGW",
-  :to => "CDG",
-  :flight_departure => Time.utc(2014, 11, 1, 14, 51),
-  :lat => "51.1536621",
-  :lng => "-0.1820629",
-  :speed_kph => 472,
-  :bearing => 1,
-  :aircraft => "Boeing 757"
-}
-
-da_54321 = {
-  :flight_number => 'da-54321',
-  :airline => 'Dan Air',
-  :from => "LAX",
-  :to => "SFO",
-  :flight_departure => Time.utc(2014, 11, 1, 14, 53),
-  :lat => "51.1536621",
-  :lng => "-0.1820629",
-  :speed_kph => 300,
-  :bearing => 2,
-  :aircraft => "DC-10 400"
-}
-
 # Find the estimated flight time- e.g. If an aircraft is flying at a speed of per hour, how long will it take to fly  miles?
 earth_radius_km = 6371
 
