@@ -1,15 +1,15 @@
 require_relative 'spec_helper'
 
 describe Flight do 
-
-	@heathrow = Airport.new(code: 'LHR', lat: 51.4700223, lng: -0.4542955)
-	@jfk = Airport.new(code: 'JFK', lat: 40.6413111, lng: -73.77813909999999)
-
+	
 	before do 
+		@lhr = Airport.new(code: 'LHR', lat: 51.4700223, lng: -0.4542955)
+		@jfk = Airport.new(code: 'JFK', lat: 40.6413111, lng: -73.77813909999999)
+
 		@flight = Flight.new(
 		:number => 'BA-12345',
 	  :airline => 'British Airways',
-	  :from => @heathrow
+	  :from => @lhr,
 	  :to => @jfk,
 	  :departure => Time.utc(2014, 11, 1, 14, 47),
 	  :speed_kph => 790,
@@ -21,7 +21,7 @@ describe Flight do
 	it "mass initializes the values" do 
 		@flight.number.must_equal 'BA-12345'
 		@flight.airline.must_equal "British Airways"
-	  @flight.from.must_equal @heathrow 
+	  @flight.from.must_equal @lhr
 	  @flight.to.must_equal @jfk
 	  @flight.departure.must_equal Time.utc(2014, 11, 1, 14, 47)
 	  @flight.speed_kph.must_equal 790
@@ -35,9 +35,9 @@ describe Flight do
 		end
 
 		it "calcualtes the hours and minutes of the flight time" do 
-			@result.must_equal Duration.new(25800)
-			@result.hours.must_equal 7
-			@result.minutes.must_equal 10
+			@result.must_equal Duration.new(25245.62886075949)
+			@result.hours.must_equal 7.012674683544303
+			@result.minutes.must_equal 0.7604810126581772
 		end
 	end
 
