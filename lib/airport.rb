@@ -23,8 +23,3 @@ Airport = Struct.new(:code, :lat, :lng) do
 
 end
 
-		# :from => "LHR",
-	 #  :from_lat => 51.4700223,
-	 #  :from_lng => -0.4542955
-	 #  :to_lat => 40.6413111,
-	 #  :to_lng => -73.77813909999999,

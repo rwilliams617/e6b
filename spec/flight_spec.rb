@@ -41,4 +41,10 @@ describe Flight do
 		end
 	end
 
+	describe "to_s" do
+		it "displays the estimated flight time" do
+			@flight.to_s.must_equal "Estimated Flight Time for BA-12345: 7 hours 1 minutes"
+		end
+	end
+
 end

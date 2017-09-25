@@ -10,13 +10,15 @@ class Flight
 
 	def estimated_duration
 		distance = from.distance_to(to)
-		hours = (distance / speed_kph)
-		minutes = distance.remainder(speed_kph)
-		# seconds = hours * 60 * 60 + minutes * 60
 		seconds = distance / speed_kph * 3600
-		puts "Estimated Flight Time for #{self.number}: #{hours} hours #{minutes} minutes"
-
 		Duration.new(seconds)
 	end
 
+	def to_s 
+		"Estimated Flight Time for #{self.number}: #{estimated_duration.hours.round} hours #{estimated_duration.minutes.round} minutes"
+	end
 end
+
+
+
+
