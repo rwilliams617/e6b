@@ -1,7 +1,6 @@
 class Flight
 
-	attr_reader :number, :airline, :from, :from_lat, :from_lng, :to, :to_lat, 
-	:to_lng, :departure, :speed_kph, :bearing, :aircraft
+	attr_reader :number, :airline, :from, :to, :departure, :speed_kph, :bearing, :aircraft
 
 	def initialize(options = {})
 		options.each do |option, value|
@@ -27,10 +26,10 @@ class Flight
 		earth_radius_km = 6371
 
 		# Convert the lat / lng from the from / to airports into radians
-		from_lat_radians = self.from_lat * Math::PI / 180
-		from_lng_radians = self.from_lng * Math::PI / 180
-		to_lat_radians = self.to_lat * Math::PI / 180
-		to_lng_radians = self.to_lng * Math::PI / 180
+		from_lat_radians = self.from.lat * Math::PI / 180
+		from_lng_radians = self.from.lng * Math::PI / 180
+		to_lat_radians = self.to.lat * Math::PI / 180
+		to_lng_radians = self.to.lng * Math::PI / 180
 
 		# Calculate the distance between the start and end airports
 		cosines_product = Math.cos(to_lat_radians) * Math.cos(from_lat_radians) * Math.cos(from_lng_radians - to_lng_radians)
