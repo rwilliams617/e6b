@@ -1,7 +1,9 @@
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'pry'
 
 require './lib/flight'
+require './lib/duration'
 
 describe "Flight" do 
 
@@ -35,6 +37,18 @@ describe "Flight" do
 	  @flight.speed_kph.must_equal 790
 	  @flight.bearing.must_equal 3
 	  @flight.aircraft.must_equal "Boeing 747"
+	end
+
+	describe "estimated_duration" do 
+		before do 
+			@result = @flight.estimated_duration
+		end
+
+		it "calcualtes the hours and minutes of the flight time" do 
+			@result.must_equal Duration.new(25800)
+			@result.hours.must_equal 7
+			@result.minutes.must_equal 10
+		end
 	end
 
 end
