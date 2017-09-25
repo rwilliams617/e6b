@@ -1,11 +1,8 @@
-require 'minitest/autorun'
-require 'minitest/pride'
+require 'spec_helper'
 require 'pry'
 
-require './lib/flight'
-require './lib/duration'
 
-describe "Flight" do 
+describe Flight do 
 
 	before do 
 		@flight = Flight.new(
