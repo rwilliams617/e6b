@@ -14,11 +14,16 @@ describe Airport do
 	end
 
 	describe "distance_to" do 
-		
+
 		it "calculates the distance between the lat/lng points" do
 			@lhr.distance_to(@jfk).must_equal 5540.013
 		end
 	end
 
-
+	describe "to_radians" do
+		it "converts the lat / lng into radians" do
+			@lhr.to_radians.must_equal(lat: 0.8983213552099045 , lng: -0.0079289522519939)
+		end
+	end
 end
+
