@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 
-class E6BTest < MiniTest::Test
+class E6BTest < MiniTest::Spec
 
   describe "Fuel Consumption" do
     before do
