@@ -52,8 +52,8 @@ describe Flight do
     	@result = @flight.fuel_consumption
     end
 
-    it "calculates the gallons per hour as 6.98" do
-    	@result.must_equal 6.98
+    it "calculates the gallons per hour as 7.12" do
+    	@result.must_equal 7.12
     end
   end
 end

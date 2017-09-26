@@ -22,9 +22,7 @@ class Flight
 
 	def fuel_consumption
 		total_fuel = 50
-		hours = 7
-		minutes = 10.0
-		total_fuel / (minutes / 60 + hours).round(3)
+		(total_fuel / (estimated_duration.minutes / 60 + estimated_duration.hours)).round(2)
 	end
 
 end
