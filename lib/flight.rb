@@ -1,5 +1,7 @@
 class Flight
 
+	
+
 	attr_reader :number, :airline, :from, :to, :departure, :speed_kph, :bearing, :aircraft
 
 	def initialize(options = {})
@@ -17,6 +19,14 @@ class Flight
 	def to_s 
 		"Estimated Flight Time for #{self.number}: #{estimated_duration.hours.round} hours #{estimated_duration.minutes.round} minutes"
 	end
+
+	def fuel_consumption
+		total_fuel = 50
+		hours = 7
+		minutes = 10.0
+		total_fuel / (minutes / 60 + hours).round(3)
+	end
+
 end
 
 
