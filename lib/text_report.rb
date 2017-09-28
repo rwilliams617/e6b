@@ -1,18 +1,11 @@
 class TextReport < Report
 
-	# def make_report
-	# 	@io = StringIO.new
-	# 	make_headings
-	# 	make_rows
-	# 	@io.string 
- #  end
-
- 	private
+ 	protected
   def make_headings 
-    @io.puts self.line
+    @io.puts line
     @io << headings.map { |heading| heading.ljust(column_width) }.join(separator)
     @io.puts separator.rstrip
-    @io.puts self.line
+    @io.puts line
 	end
 
 	def make_rows
@@ -23,7 +16,7 @@ class TextReport < Report
 		end
 	end
 
-  #table_lines
+  private
   def line(style = "=")
     column_nb = headings.count
 

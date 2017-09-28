@@ -1,8 +1,9 @@
 class Report
 	
-	def initialize(headings:, rows:)
+	def initialize(headings:, rows:, sort_strategy:)
 		@headings = headings
 		@rows = rows
+		@sort_strategy = sort_strategy.sort(rows)
 	end	
 
 	
