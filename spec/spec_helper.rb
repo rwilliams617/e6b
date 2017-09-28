@@ -1,9 +1,13 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require 'pry'
+
 require './lib/flight'
 require './lib/duration'
 require './lib/airport'
 require './lib/earth'
 require './lib/point'
 require './lib/plane'
+require './lib/report'
+require './lib/text_report'
+require './lib/html_report'
