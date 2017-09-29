@@ -1,4 +1,4 @@
-class TextReport < Report
+class E6b::TextReport < Report
 
  	protected
   def make_headings 

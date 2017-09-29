@@ -1,4 +1,4 @@
-class Plane
+class E6b::Plane
 
 	def convert
 		@celsius = 0

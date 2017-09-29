@@ -1,4 +1,4 @@
-class Point
+class E6b::Point
 
 	PI_IN_RADIANS = Math::PI / 180
 

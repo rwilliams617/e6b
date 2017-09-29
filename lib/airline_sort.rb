@@ -1,4 +1,4 @@
-class AirlineSort
+class E6b::AirlineSort
 
   def initialize(sorting_order:)
     @sorting_order = sorting_order

@@ -1,4 +1,4 @@
-Duration = Struct.new(:seconds) do
+E6b::Duration = Struct.new(:seconds) do
 
 	SECONDS_IN_AN_HOUR = 3600
 	SECONDS_IN_A_MINUTE = 60

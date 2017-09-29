@@ -1,7 +1,5 @@
-class Flight
-
+class E6b::Flight
 	
-
 	attr_reader :number, :airline, :from, :to, :departure, :speed_kph, :bearing, :aircraft
 
 	def initialize(options = {})

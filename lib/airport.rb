@@ -1,4 +1,4 @@
-Airport = Struct.new(:code) do
+E6b::Airport = Struct.new(:code) do
 
 	def initialize(**args)
 		args.each do |method_name, value|

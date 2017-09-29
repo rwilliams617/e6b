@@ -1,4 +1,4 @@
-class Report
+class E6b::Report
 	
 	def initialize(headings:, rows:, sort_strategy:)
 		@headings = headings
