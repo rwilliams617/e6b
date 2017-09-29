@@ -1,6 +1,5 @@
 require_relative 'spec_helper'
 
-
 describe Report do
 
   describe "TextReport" do
@@ -20,7 +19,7 @@ AL-666                 | Alitalia               | LHR                    | 06:00
 BA-12345               | British Airways        | LHR                    | 21:47                  |
 ----------------------------------------------------------------------------------------------------
 REPORT
-      # binding.pry
+    
       @report.make_report.must_equal(expected) 
 
     end
@@ -43,7 +42,7 @@ BA-12345               | British Airways        | LHR                    | 21:47
 AL-666                 | Alitalia               | LHR                    | 22:00                  |
 ----------------------------------------------------------------------------------------------------
 REPORT
-      # binding.pry
+    
       @report.make_report.must_equal(expected)      
     end
   end

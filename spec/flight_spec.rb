@@ -58,14 +58,5 @@ describe Flight do
   end
 end
 
-# describe "flight_time_left" do
-#   before do
-#     @gallons_burned_per_hour = 15
-#     @gallons_left = 60
-#   end
-
-#   it "should calculate the total time the aircraft can fly as 4 hours" do
-#   end
-# end
 
 
