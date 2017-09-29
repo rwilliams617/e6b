@@ -7,7 +7,7 @@ describe Report do
     before do
       @report = TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
       rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "06:00"]],
-      sort_strategy: AirlineSort.new(sorting_order: :asc))  
+      sort_strategy: proc {|row| row[1]})  
     end
 
     it "should display the flight list in text format sorted by airlines, ascending" do
@@ -30,7 +30,7 @@ REPORT
     before do
       @report = TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
       rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "22:00"]],
-      sort_strategy: EtaSort.new(sorting_order: :asc))
+      sort_strategy: proc {|row| row[3]})
     end
 
     it "should display the flight list in text format sorted by Eta, ascending" do
@@ -49,7 +49,7 @@ REPORT
   end
 
 
-  describe HtmlReport do
+  describe "HtmlReport" do
     before do
       @report = HtmlReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
         rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "06:00"]],

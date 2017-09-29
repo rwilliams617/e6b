@@ -2,8 +2,7 @@ class Report
 	
 	def initialize(headings:, rows:, sort_strategy:)
 		@headings = headings
-		@rows = rows
-		@sort_strategy = sort_strategy.sort(rows)
+		@rows = rows.sort_by(&sort_strategy)
 	end	
 
 	
