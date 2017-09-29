@@ -1,4 +1,4 @@
-class E6b::Reports::HtmlReport < Report
+class E6b::Reports::HtmlReport < E6b::Reports::Report
    
  def initialize(**args)
    super args

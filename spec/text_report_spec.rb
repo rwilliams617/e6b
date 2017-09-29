@@ -1,10 +1,10 @@
 require_relative 'spec_helper'
 
-describe Report do
+describe "Report" do
 
   describe "TextReport" do
     before do
-      @report = TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
+      @report = Reports::TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
       rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "06:00"]],
       sort_strategy: proc {|row| row[1]})  
     end
@@ -27,7 +27,7 @@ REPORT
 
   describe "TextReport Eta sort" do
     before do
-      @report = TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
+      @report = Reports::TextReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
       rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "22:00"]],
       sort_strategy: proc {|row| row[3]})
     end
@@ -50,9 +50,9 @@ REPORT
 
   describe "HtmlReport" do
     before do
-      @report = HtmlReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
+      @report = Reports::HtmlReport.new(headings: ["Flight No.", "Airline", "From", "Estimated Arrival Time"],
         rows: [["BA-12345", "British Airways", "LHR", "21:47"], ["AL-666", "Alitalia", "LHR", "06:00"]],
-        sort_strategy: EtaSort.new(sorting_order: :asc))
+        sort_strategy: proc {|row| row[3]})
     end
     
 

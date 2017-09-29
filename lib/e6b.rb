@@ -1,7 +1,8 @@
 require "e6b/version"
 
 module E6b
-  # Your code goes here...
+	module Reports
+	end
 end
 
 require 'e6b/flight'

@@ -2,6 +2,6 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'minitest/autorun'
 require 'minitest/pride'
 
-require './lib/e6b'
+require './lib/e6b/'
 
 include E6b
