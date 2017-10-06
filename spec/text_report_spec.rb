@@ -72,16 +72,16 @@ REPORT
       </thead>
       <tbody>
         <tr>
-          <td>BA-12345</td>
-          <td>British Airways</td>
-          <td>LHR</td>
-          <td>21:47</td>
-        </tr>
-        <tr>
           <td>AL-666</td>
           <td>Alitalia</td>
           <td>LHR</td>
           <td>06:00</td>
+        </tr>
+        <tr>
+          <td>BA-12345</td>
+          <td>British Airways</td>
+          <td>LHR</td>
+          <td>21:47</td>
         </tr>
       </tbody>
     </table>
